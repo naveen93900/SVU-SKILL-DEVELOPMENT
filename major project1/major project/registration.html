@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registration Page</title>
+
+    <style>
+        header {
+    background-color: #2f73b8;
+    
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+   
+    justify-content: center;
+    height: 100vh;
+    background-color: #524a4a;
+    background-image: linear-gradient(rgb(247, 35, 120),rgb(152, 137, 137),rgb(116, 119, 116));
+}
+
+.registration-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-left: 450px;
+    box-shadow: 15px 15px  15px gray;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+#pass{
+    
+    background-color: #4caf50;
+    color: #000000;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#success-message {
+    color: green;
+    margin-top: 10px;
+}
+
+#error-message {
+    color: red;
+    margin-top: 10px;
+}
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+#log-in{
+    color: beige;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SVU Skill Development</h1>
+        <p>Unlock Your Potential</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="registration.html"></a></li>
+        </ul>
+    </nav>
+
+    
+<br><br>
+    <div class="registration-container">
+        <h2>Register</h2>
+        <form action="register.php"   method="post"   id="registrationForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+           
+            <input id="pass"  type="submit" value="Register" name="submit">
+        </form>
+        <p id="success-message"></p>
+        <p id="error-message"></p>
+        <p id="login">If already Registered, Log In here!</p>
+        <br>
+        
+       <a href="login.php"   >Log In</a>
+       
+    </div>
+
+    <script>
+        function validateRegistration() {
+    var username = document.getElementById('username').value;
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    var successMessage = document.getElementById('success-message');
+    var errorMessage = document.getElementById('error-message');
+
+    
+    if (username && email && password) {
+        successMessage.textContent = 'Registration successful!';
+        errorMessage.textContent = '';
+    } else {
+        successMessage.textContent = '';
+        errorMessage.textContent = 'All fields are required';
+    }
+}
+
+    </script>
+</body>
+</html>

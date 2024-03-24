@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVU Skill Development</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   
+    
+
+<style>
+     
+     body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.main-content {
+    padding: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#log-in{
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 15px;
+}
+
+#m1{
+    font-size: 30px;
+    background-color: rgb(11, 10, 10);
+    color: rgb(81, 135, 189);
+}
+#m2{
+    color: #3498db;
+    background-color: #030303;
+    
+}
+#im{
+    margin-left: 500px;
+}
+
+img{
+    margin-right: 10px;
+    margin-left: 20px;
+    padding: 50px;
+}
+#principle{
+
+    height: 500px;
+    width: 600px;
+}
+#i{
+    height:500px;
+    width: 600px;
+}
+#vc{
+    height:500px;
+    width: 800px;
+
+}
+.dropdown{
+    margin-left: 1100px;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+    <h1>SVU Skill Development Cell</h1>
+    <p>Unlock Your Potential</p>
+    
+</header>
+
+<nav>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contact.php">Contact</a></li>
+        <li><a href="careers.html">Careers</a></li>
+       
+        <div class="dropdown" onclick="toggleDropdown()">
+                <button id="drop" class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Login
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="login.php">Student</a></li>
+                  <li><a class="dropdown-item" href="dept_login.php">Guide</a></li>
+                  <li><a class="dropdown-item" href="admin.php">Admin</a></li>
+                </ul>
+              </div>
+            
+
+    </ul>
+</nav>
+
+
+
+
+<marquee id="m1" >COURSES OFFERED " WEB DEVELOPMENT, DATA SCIENCE, FULL STACK DEVELOPMENT,CYBERSECURITY,ARTIFICIAL INTELLIGENCE" </marquee>
+<br>
+<marquee id="m2">SVU SKILL DEVELOPMENT IS NOTHING BUT ROAD MAP FOR LEARNING</marquee>
+
+<section class="main-content">
+    <h2>Welcome to SVU Skill Development</h2>
+    <p>Explore our courses and enhance your skills to succeed in your career.</p>
+</section>
+
+
+
+
+
+
+
+
+<
+
+<big><big><big>O</big></big></big>ur skill development is 
+        a training academy that provides free software courses exclusively for students.
+        <br> The Skill Development aims to support students in acquiring the knowledge and 
+        skills required to succeed in today's digital world.<br> The courses offered by Our Academy c
+        over a wide range of software topics, including programming languages, web development, 
+        database management, and more.<br> The academy provides high-quality training through experienced instructors 
+        and offers both online and in-person learning options.
+        <br> By offering free courses, Our Academy provides a valuable opportunity for students to
+         improve their skills and gain a competitive advantage in their future careers.
+<br><br><br><br>
+
+<div  >  
+    
+    
+   
+    <img src="skill-india.png" class="object-fit-none border rounded" alt="...">
+     <img src="training.jpg" class="object-fit-none border rounded" alt="...">
+     <img src="learn.jpg" class="object-fit-none border rounded" alt="..."><br><br><br>
+   
+</div>
+
+
+<br><br><br>
+
+
+
+
+    
+<footer>
+    <p>This Website has been visited <span id="counter">0</span> times.</p>
+
+    <p>&copy; 2024 SVU Skill Development. All rights reserved.</p>
+</footer>
+
+
+
+<script>
+    // Retrieve the current count from local storage
+    let count = localStorage.getItem("counter");
+
+    // If count is null (first visit), set it to 0
+    if (count === null) {
+        count = 0;
+    }
+
+    // Display the count on the webpage
+    document.getElementById("counter").textContent = count;
+
+    // Increment the count and update the display
+    count++;
+    document.getElementById("counter").textContent = count;
+
+    // Update the count in local storage
+    localStorage.setItem("counter", count);
+</script>
+
+<script>
+    function toggleDropdown() {
+      var dropdownContent = document.querySelector('.dropdown-menu');
+      dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

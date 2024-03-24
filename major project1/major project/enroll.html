@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVU Skill Development - Enroll Now</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #3f4142;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    background-image:
+     linear-gradient(rgb(247, 35, 120),rgb(152, 137, 137),rgb(116, 119, 116));
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.enroll-form{
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    margin-left: 350px;
+    height: 700px;
+}
+input {
+    width: 50%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+   margin-left: 30px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 300px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+img{
+            margin-left:500px ;
+        }
+
+        #course{
+            height: 40px;
+            width: 250px;
+        }
+        #gender{
+margin-left: 39px;
+
+        }
+        .word-spacing{
+            margin-right: 35px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SVU Skill Development</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+       
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="careers.html">Careers</a></li>
+       
+    </ul>
+</nav>
+
+
+<section class="main-content">
+    <h2>Enroll Now</h2>
+
+    <p>Thank you for choosing SVU Skill Development! Please fill out the form below to enroll in the course:</p>
+
+
+    <div class="enroll-form">
+        <form action="enrollconnect.php" method="post" id="enrollForm">
+            <h1>Enroll-form</h1>
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" required>
+<br><br>
+<label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required>
+
+            <br><br>
+            <label for="email"><span class="word-spacing">Email</span>     :  </label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+            <label for="mobile">Mobile No  : </label>
+            <input type="number" id="mobile" name="mobile" required>
+<br><br>
+
+<label for="course">Select Course  :  </label>
+<select   id="course" name="course" required>
+    <option value="NONE">NONE</option>
+    <option value="web">Web Development</option>
+    <option value="data">Data Science</option>
+    <option value="cyber">Cyber Security</option>
+    <option value="fsd">Full Stack Web Development</option>
+    <option value="cc">Cloud Computing</option>
+</select>
+            <br><br><br>
+            <label for="DOB"><span class="word-spacing">DOB</span>: </label>
+            <input type="date" id="DOB" name="DOB" required>
+<br><br>
+
+
+
+<label for="address"> Address  :  </label>
+<input type="text" id="address" name="address" required>
+<br><br>
+
+<input id="pass"  type="submit" value="Enroll" name="enroll">
+        </form>
+    </div>
+</section>
+<img src="svul.png" >
+<footer>
+    <p>&copy; 2024 SVU Skill Development. All rights reserved.</p>
+</footer>
+
+<script>
+    function submitEnrollmen() {
+    var firstName = document.getElementById("firstName").value;
+    var lastname = document.getElementById("lastname").value;
+    var email = document.getElementById("email").value;
+    var mobile = document.getElementById("mobile").value;
+    var course = document.getElementById("course").value;
+    var DOB = document.getElementById("DOB").value;
+    var address = document.getElementById("address").value;
+    var resume = document.getElementById("resume").document;
+
+    // Add logic for handling the enrollment (e.g., sending confirmation, storing data)
+    alert("Enrollment successful!\nName: <br>" + firstName + "\nlastname : "+lastname+"\nemail: " + email+
+    "\nmobile : "+mobile+"\ncourse"+course+"\nDOB : "+DOB+"\naddress : "+address);
+    document.getElementById("enrollForm").reset();
+}
+
+</script>
+</body>
+</html>
